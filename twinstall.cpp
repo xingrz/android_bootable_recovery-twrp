@@ -313,6 +313,8 @@ static int Run_Update_Binary(const char *path, ZipWrap *Zip, int* wipe_cache, zi
 			// Do nothing, not supported by TWRP
 		} else if (strcmp(command, "log") == 0) {
 			printf("%s\n", strtok(NULL, "\n"));
+		} else if (strcmp(command, "inc_progress") == 0) {
+			// Do nothing, used by Meizu
 		} else {
 			LOGERR("unknown command [%s]\n", command);
 		}
